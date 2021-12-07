@@ -10,6 +10,8 @@
 </head>
 <body>
     <button id="btnjs1" > JSON 1</button>
+    Name :<span id ="fname"><span><br/>
+    Sname :<span id="lname"></span>
 </body>
 
 <script>
@@ -17,6 +19,8 @@
     function loadJS(){
         var url = "https://cj-android-demon.herokuapp.com/json1.php"
         $.get(url,(data,status) => {
+            console.log(data);
+            var jData = JSON.parse(data);
             console.log(data);
         });
 
