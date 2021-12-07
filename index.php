@@ -25,6 +25,12 @@
             .done((data)=>{
                 $.each(data, (k, item)=>{
                     console.log(item);
+                    var line = "<tr>";
+                        line += "<td>"+ item.id + "</td>";
+                        line += "<td>"+ item.title + "</td>";
+                        line += "<td>"+ item.userId + "</td>";
+                        line += "</tr>";
+                    $("#tblPosts").append(line);
                 });
             })
             .fail((xhr, status, error)=>{
